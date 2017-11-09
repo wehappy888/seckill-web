@@ -1,3 +1,4 @@
 com/seckill/dao/SeckillDaoTest.class
-com/seckill/service/SeckillServiceTest.class
 com/seckill/dao/SuccessKilledDaoTest.class
+com/seckill/service/SeckillServiceTest.class
+com/seckill/dao/cache/RedisDaoTest.class

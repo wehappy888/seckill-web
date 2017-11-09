@@ -1,6 +1,7 @@
 com/seckill/entity/Seckill.class
 com/seckill/exception/RepeatKillException.class
 com/seckill/dao/SeckillDao.class
+com/seckill/dao/cache/RedisDao.class
 com/seckill/service/impl/SeckillServiceImpl.class
 com/seckill/enums/SeckillStatEnum.class
 com/seckill/exception/SeckillException.class

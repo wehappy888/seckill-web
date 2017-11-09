@@ -2,6 +2,7 @@
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/exception/SeckillCloseException.java
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/entity/Seckill.java
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/service/impl/SeckillServiceImpl.java
+/Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/dao/cache/RedisDao.java
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/dto/Exposer.java
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/exception/SeckillException.java
 /Users/waynewang/workspace/springmvc/seckill-web/src/main/java/com/seckill/dto/SeckillResult.java
