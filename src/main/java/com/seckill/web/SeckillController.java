@@ -21,7 +21,7 @@ import java.util.List;
  * Created by waynewang on 2017/11/3.
  */
 @Controller
-@RequestMapping("/seckill")//url:模块/资源/{}/细分
+@RequestMapping("")//url:模块/资源/{}/细分
 public class SeckillController {
     @Autowired
     private SeckillService seckillService;
@@ -82,9 +82,9 @@ public class SeckillController {
         SeckillResult<SeckillExecution> result;
 
         try {
-            //SeckillExecution execution = seckillService.executeSeckill(seckillId, userPhone, md5);
+            SeckillExecution execution = seckillService.executeSeckill(seckillId, userPhone, md5);
             //调用存储过程执行秒杀
-            SeckillExecution execution = seckillService.executeSeckillProcedure(seckillId, userPhone, md5);
+            //SeckillExecution execution = seckillService.executeSeckillProcedure(seckillId, userPhone, md5);
             return new SeckillResult<SeckillExecution>(true, execution);
         } catch (RepeatKillException e1) {
             SeckillExecution execution = new SeckillExecution(seckillId, SeckillStatEnum.REPEAT_KILL);
@@ -99,7 +99,10 @@ public class SeckillController {
 
     }
 
-    //获取系统时间
+    /**
+     * 获取系统时间
+     * @return
+     */
     @RequestMapping(value = "/time/now", method = RequestMethod.GET)
     @ResponseBody
     public SeckillResult<Long> time() {

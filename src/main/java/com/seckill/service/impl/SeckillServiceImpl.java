@@ -66,7 +66,8 @@ public class SeckillServiceImpl implements SeckillService {
         if (seckill == null) {
             //2.访问数据库
             seckill = seckillDao.queryById(seckillId);
-            if (seckill == null) {//说明查不到这个秒杀产品的记录
+            //说明查不到这个秒杀产品的记录
+            if (seckill == null) {
                 return new Exposer(false, seckillId);
             } else {
                 //3,放入redis
@@ -105,7 +106,8 @@ public class SeckillServiceImpl implements SeckillService {
     public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws SeckillException, RepeatKillException, SeckillCloseException {
 
         if (md5 == null || !md5.equals(getMD5(seckillId))) {
-            throw new SeckillException("seckill data rewrite");//秒杀数据被重写了
+            //秒杀数据被重写了
+            throw new SeckillException("seckill data rewrite");
         }
 
         //执行秒杀逻辑:减库存+增加购买明细
@@ -142,7 +144,8 @@ public class SeckillServiceImpl implements SeckillService {
     public SeckillExecution executeSeckillProcedure(long seckillId, long userPhone, String md5) {
 
         if (md5 == null || !md5.equals(getMD5(seckillId))) {
-            throw new SeckillException("seckill data rewrite");//秒杀数据被重写了
+            //秒杀数据被重写了
+            throw new SeckillException("seckill data rewrite");
         }
 
         Date killTime = new Date();
